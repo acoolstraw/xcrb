@@ -1,0 +1,9 @@
+name: xcrb
+version: 0.1.0
+
+authors:
+  - straw <straw@pinnoto.org
+
+crystal: 1.3.0
+
+license: MIT

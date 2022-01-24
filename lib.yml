@@ -1,0 +1,52 @@
+name: LibXCB
+ldflags: "-lxcb"
+packages: libxcb
+destdir: src/
+definitions:
+# bigreq.h     glx.h          shape.h     xcb_bitops.h   xcb_pixel.h       xfixes.h    xtest.h
+# composite.h  present.h      shm.h       xcb_cursor.h   xcb_renderutil.h  xinerama.h  xv.h
+# damage.h     randr.h        sync.h      xcb_event.h    xcb_util.h        xinput.h    xvmc.h
+# dpms.h       record.h       xc_misc.h   xcb_ewmh.h     xcb_xrm.h         xkb.h
+# dri2.h       render.h       xcb.h       xcb_icccm.h    xcbext.h          xprint.h
+# dri3.h       res.h          xcb_atom.h  xcb_image.h    xevie.h           xproto.h
+# ge.h         screensaver.h  xcb_aux.h   xcb_keysyms.h  xf86dri.h         xselinux.h
+  xcb:
+    includes:
+    - /usr/include/xcb/xcb.h
+    - /usr/include/xcb/xcb_atom.h
+    - /usr/include/xcb/xcb_aux.h
+    - /usr/include/xcb/xcb_bitops.h
+    - /usr/include/xcb/xcb_cursor.h
+    - /usr/include/xcb/xcb_event.h
+    - /usr/include/xcb/xcb_ewmh.h
+    - /usr/include/xcb/xcb_icccm.h
+    - /usr/include/xcb/xcb_image.h
+    - /usr/include/xcb/xcb_keysyms.h
+    - /usr/include/xcb/xcb_pixel.h
+    - /usr/include/xcb/xcb_renderutil.h
+    - /usr/include/xcb/xcb_util.h
+    - /usr/include/xcb/xcb_xrm.h
+    - /usr/include/xcb/xcbext.h
+    - /usr/include/xcb/xproto.h
+    prefixes:
+    - xcb_
+  #rig:
+  #  includes:
+  #  - /usr/include/hamlib/rig.h
+  #  - /usr/include/hamlib/rig_dll.h
+  #  - /usr/include/hamlib/riglist.h
+  #  prefixes:
+  #  - rig_
+  #rotator:
+  #  includes:
+  #  - /usr/include/hamlib/rotator.h
+  #  - /usr/include/hamlib/rotlist.h
+  #  prefixes:
+  #  - rot_
+#rename:
+#  rules:
+#    "*":
+#    - pattern: ^XCB
+#      replacement: ""
+options:
+  import_docstrings: brief
